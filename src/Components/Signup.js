@@ -8,11 +8,9 @@ import {
   Button,
 } from "@material-ui/core";
 import AddCircleOutlineOutlinedIcon from "@material-ui/icons/AddCircleOutlineOutlined";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
+
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-import FormControl from "@material-ui/core/FormControl";
-import FormLabel from "@material-ui/core/FormLabel";
+
 import Checkbox from "@material-ui/core/Checkbox";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { FormHelperText } from "@material-ui/core";
@@ -21,7 +19,7 @@ const Signup = () => {
   const paperStyle = { padding: 20, width: 300, margin: "0 auto" };
   const headerStyle = { margin: 0 };
   const avatarStyle = { backgroundColor: "#1bbd7e" };
-  const marginTop = { marginTop: 5 };
+  
   const initialValues = {
     name: "",
     email: "",
@@ -94,30 +92,7 @@ const Signup = () => {
                 placeholder="Enter your email"
                 helperText={<ErrorMessage name="email" />}
               />
-              <FormControl component="fieldset" style={marginTop}>
-                <FormLabel component="legend">Gender</FormLabel>
-                <Field
-                  as={RadioGroup}
-                  aria-label="gender"
-                  name="gender"
-                  name="gender"
-                  style={{ display: "initial" }}
-                >
-                  <FormControlLabel
-                    value="female"
-                    control={<Radio />}
-                    label="Female"
-                  />
-                  <FormControlLabel
-                    value="male"
-                    control={<Radio />}
-                    label="Male"
-                  />
-                </Field>
-              </FormControl>
-              <FormHelperText>
-                <ErrorMessage name="gender" />
-              </FormHelperText>
+           
               <Field
                 as={TextField}
                 fullWidth
